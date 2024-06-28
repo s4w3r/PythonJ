@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar usuario</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/estilo_reg.css')}}">
+</head>
+<body>
+    <div class="container"></div>
+    <h1>Registro</h1>
+    <form method="post" action="/RegistroUsuario">
+        <label for="">Nombre</label>
+        <br>
+        <input type="text" name="Nombre" required>
+        <br>
+        <label for="">Apellido</label>
+        <br>
+        <input type="text" name="Apellido" required>
+        <br>
+        <label for="">Email</label>
+        <br>
+        <input type="email" name="Email" required>
+        <br>
+        <label for="">Usuario</label>
+        <br>
+        <input type="text" name="Usuario" required>
+        <br>
+        <label for="">Contraseña</label>
+        <br>
+        <input type="text" name="Contraseña" required>
+        <br>
+        <select name="Rol" id="">
+            <option value="">Seleccione</option>
+            <option value="Administrador">Administrador</option>
+            <option value="Usuario">Usuario</option>
+
+        </select>
+        <br>
+        <button>Registrar</button>
+    </form>
+</body>
+</html>

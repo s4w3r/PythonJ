@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/prinusu.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="/registrotarea">Registrar Tarea</a></li>
+            <li><a href="/salir">Cerrar sesion</a></li>
+        </ul>
+
+    </nav>
+        <table>
+            
+            <tr>
+                <th>id</th>
+                <th>Tarea</th>
+                <th>Fecha-inicial</th>
+                <th>Fecha-final</th>
+                <th>Estado</th>
+            </tr>
+        
+            {% for tarea in tareas %}
+            <tr>
+                <td>{{ tarea['id_tar'] }}</td>
+                <td>{{ tarea['nombre_tar'] }}</td>
+                <td>{{ tarea['fechaInicio'] }}</td>
+                <td>{{ tarea['fechaFin'] }}</td>
+                <td>{{ tarea['estado'] }}</td>
+            </tr>
+            {% endfor %}
+        
+    </table>
+</body>
+</html>

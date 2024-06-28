@@ -1,0 +1,25 @@
+.menu {
+    background-color: #333; /* Color de fondo del menú */
+    padding: 10px 20px; /* Espaciado interno */
+}
+
+.menu ul {
+    list-style-type: none; /* Quita los estilos de la lista */
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    display: inline; /* Muestra los elementos de la lista en línea */
+    margin-right: 20px; /* Espacio entre elementos */
+}
+
+.menu ul li a {
+    text-decoration: none; /* Quita el subrayado del enlace */
+    color: #fff; /* Color del texto del enlace */
+    font-size: 18px; /* Tamaño de fuente del enlace */
+}
+
+.menu ul li a:hover {
+    color: #ffd700; /* Color del texto del enlace al pasar el ratón */
+}

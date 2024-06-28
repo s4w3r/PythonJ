@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/prin.css')}}">
+    <title>Pestaña admin</title>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="/registrotarea">Registrar Tarea</a></li>
+            <li><a href="/registrousuario">Registrar usuario</a></li>
+            <li><a href="/salir">Cerrar sesion</a></li>
+        </ul>
+
+    </nav>
+    <h1>Usuarios registrados</h1>
+    <table>
+        
+            <tr>
+                <th>id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Usuario</th>
+                <th>Rol</th>
+            </tr>
+        
+            {% for usuario in usuarios %}
+            <tr>
+                <td>{{ usuario['id_usu'] }}</td>
+                <td>{{ usuario['Nombre'] }}</td>
+                <td>{{ usuario['Apellido'] }}</td>
+                <td>{{ usuario['Email'] }}</td>
+                <td>{{ usuario['Usuario'] }}</td>
+                <td>{{ usuario['Rol'] }}</td>
+            </tr>
+            {% endfor %}
+        
+    </table>
+</body>
+</html>

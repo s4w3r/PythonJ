@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" >
+        <title>Registro</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/estilo.css')}}">
+    </head>
+<body>
+    <div class="container"></div>
+    <h1>Registro de tareas</h1>
+    <form method="post" action="/registrotarea">
+        <label for="">Nombre de tarea</label>
+        <input type="text" name="nombretar" required>
+        <label for="">Fecha de inicio</label>
+        <input type="date" name="fecha_inicio">
+        <label for="">Fecha de finalización</label>
+        <input type="date" name="fecha_fin">
+        <label for="">Estado de la tarea</label>
+        <select name="Estado">
+            <option value="asignado">Asignado</option>
+            <option value="por asignar">Por asignar</option>
+            <option value="terminado">Terminado</option>
+
+        </select>
+    </form>
+</body>
+
+</html>
